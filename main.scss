@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'NeueMontreal-Bold'; /* A name to be used later */
+    src: url('/media/fonts/NeueMontreal-Bold.otf'); /* URL to font file */
+}
+
+@font-face {
+    font-family: 'NeueMontreal-Light'; /* A name to be used later */
+    src: url('/media/fonts/NeueMontreal-Light.otf'); /* URL to font file */
+}
+
+
+
+
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    margin: 0;
+        h1 {
+            margin-left: 40px;
+            margin-top: 40px;
+            height: fit-content;
+            font-weight: 200;
+            font-size: 30px;
+            color: white;
+            font-family: NeueMontreal-Light;
+        }
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 
+        inset 0 0 0 20px rgba(0, 0, 0, 0.89),
+        inset 0 0 0 21px rgba(255, 255, 255, 0.486);
+    pointer-events: none;
+}
+
