@@ -8,9 +8,24 @@
     src: url('/media/fonts/NeueMontreal-Light.otf'); /* URL to font file */
 }
 
+@font-face {
+    font-family: 'NeueMontreal-Medium'; /* A name to be used later */
+    src: url(media/fonts/NeueMontreal-Medium.otf);
+}
 
+@font-face {
+    font-family: 'NeueMontreal-Bold'; /* A name to be used later */
+    src: url(media/fonts/NeueMontreal-Bold.otf);
+}
 
+@font-face {
+    font-family: 'NeueMontreal-Regular'; /* A name to be used later */
+    src: url(media/fonts/NeueMontreal-Regular.otf);
+}
 
+$font-light: 'NeueMontreal-Light', sans-serif;
+$font-bold: 'NeueMontreal-Bold', sans-serif;
+$font-regular: 'NeueMontreal-Regular', sans-serif;
 
 html, body {
     width: 100vw;
@@ -26,15 +41,61 @@ html, body {
     background-color: black;
     overflow: hidden;
     margin: 0;
-        h1 {
-            margin-left: 40px;
-            margin-top: 40px;
-            height: fit-content;
-            font-weight: 200;
-            font-size: 30px;
-            color: white;
-            font-family: NeueMontreal-Light;
-        }
+}
+
+.container__left {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+    h1 {
+        white-space: nowrap;
+        margin-left: 40px;
+        margin-top: 35px;
+        margin-bottom: 0;
+        height: fit-content;
+        font-weight: lighter;
+        font-size: 30px;
+        color: rgba(255, 255, 255, 0.850);
+        font-family: $font-light;
+    }
+    h2 {
+        letter-spacing:1px;
+        white-space: nowrap;
+        margin-top: 0;
+        margin-left: 42px;
+        height: fit-content;
+        font-weight:light;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.850);
+        font-family: $font-light;
+    }
+}
+
+.container__left__links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-left: 40px;
+    height: fit-content;
+    font-weight:bold;
+    font-size: 14px;
+    color: white;
+    font-family: $font-regular;
+    a {
+        text-decoration: none;
+        color: white;
+        margin-bottom: 20px;
+    }
+    ul {
+        padding-left: 0px;
+        list-style-type: none;
+    }
+    li {
+        margin-bottom: 10px;
+    }
 }
 
 .container::before {
