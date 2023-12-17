@@ -11,10 +11,6 @@
   src: url(media/fonts/NeueMontreal-Medium.otf);
 }
 @font-face {
-  font-family: "NeueMontreal-Bold"; /* A name to be used later */
-  src: url(media/fonts/NeueMontreal-Bold.otf);
-}
-@font-face {
   font-family: "NeueMontreal-Regular"; /* A name to be used later */
   src: url(media/fonts/NeueMontreal-Regular.otf);
 }
@@ -90,6 +86,52 @@ html, body {
 }
 .container__left__links li {
   margin-bottom: 10px;
+}
+
+.container__themes {
+  position: absolute;
+  bottom: 128px;
+  left: -106px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  margin-left: 0px;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+  font-family: "NeueMontreal-Light", sans-serif;
+  width: -moz-fit-content;
+  width: fit-content;
+  transform: rotate(-90deg);
+}
+.container__themes a {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 20px;
+}
+.container__themes ul {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding-left: 0px;
+  list-style-type: none;
+}
+.container__themes li {
+  position: relative;
+  margin-bottom: 10px;
+}
+.container__themes li::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  transform: translateY(-44%);
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 0%;
 }
 
 .container::before {
