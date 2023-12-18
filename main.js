@@ -80,3 +80,28 @@ let homeElement = document.getElementById('home');
 originalHTML['home'] = homeElement.innerHTML;
 homeElement.innerHTML = '<i class="fa-solid fa-circle fa-2xs"></i>';
 
+document.getElementById('dark').addEventListener('click', () => {
+    let lightElement = document.getElementById('light');
+    let darkElement = document.getElementById('dark');
+    
+    if (darkElement.classList.contains('themeActive')) {
+        darkElement.classList.remove('themeActive');
+        lightElement.classList.add('themeActive');
+    } else {
+        lightElement.classList.remove('themeActive');
+        darkElement.classList.add('themeActive');
+    }
+});
+
+document.getElementById('light').addEventListener('click', () => {
+    let lightElement = document.getElementById('light');
+    let darkElement = document.getElementById('dark');
+    
+    if (lightElement.classList.contains('themeActive')) {
+        lightElement.classList.remove('themeActive');
+        darkElement.classList.add('themeActive');
+    } else {
+        darkElement.classList.remove('themeActive');
+        lightElement.classList.add('themeActive');
+    }
+});
