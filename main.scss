@@ -85,6 +85,11 @@ body {
     text-decoration: none;
     color: white;
     margin-bottom: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+        &:hover {
+        color: rgba(255, 255, 255, 0.26);
+        }
   }
   ul {
     padding-left: 0px;
@@ -159,7 +164,12 @@ body {
     width: 50vw;
     height: 100vh;
 }
-
+#active
+{
+    display: flex;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
 .container__right__home {
     display: none;
     flex-direction: column-reverse;
@@ -301,5 +311,26 @@ body {
     }
     li {
         margin-bottom: 10px;
+    }
+}
+
+.container__right__contact {
+    opacity: 0;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    display: none;
+    flex-direction: column;
+    margin-top: 785px;
+    margin-left: 75px;
+    height: fit-content;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    font-family: $font-regular;
+    list-style-type: none;
+    a {
+        text-decoration: none;
+        color: white;
+        margin-bottom: 20px;
     }
 }

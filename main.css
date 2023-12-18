@@ -80,6 +80,11 @@ body {
   text-decoration: none;
   color: white;
   margin-bottom: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.container__left__links a:hover {
+  color: rgba(255, 255, 255, 0.26);
 }
 .container__left__links ul {
   padding-left: 0px;
@@ -152,6 +157,12 @@ body {
   display: flex;
   width: 50vw;
   height: 100vh;
+}
+
+#active {
+  display: flex;
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
 .container__right__home {
@@ -298,4 +309,26 @@ body {
 }
 .info__links__bottom li {
   margin-bottom: 10px;
+}
+
+.container__right__contact {
+  opacity: 0;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  display: none;
+  flex-direction: column;
+  margin-top: 785px;
+  margin-left: 75px;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  font-family: "NeueMontreal-Regular", sans-serif;
+  list-style-type: none;
+}
+.container__right__contact a {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=main.css.map */
