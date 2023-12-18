@@ -10,6 +10,9 @@ function handleClick(id) {
     let element = document.getElementById(id);
     let containerElementHome = document.getElementsByClassName('container__right__home')[0];
     let containerElementProject = document.getElementsByClassName('container__right__projects')[0];
+    let containerElementInfo = document.getElementsByClassName('info__links')[0];
+    let containerElementInfoBottom = document.getElementsByClassName('info__links__bottom')[0];
+    let containerElementContact = document.getElementsByClassName('container__right__contact')[0];
 
     if (element.classList.contains('active')) {
         location.reload();
@@ -27,6 +30,20 @@ function handleClick(id) {
             containerElementProject.id = 'active';
         } else {
             containerElementProject.id = '';
+        }
+
+        if (id === 'info') {
+            containerElementInfo.id = 'active';
+            containerElementInfoBottom.id = 'active';
+        } else {
+            containerElementInfo.id = '';
+            containerElementInfoBottom.id = '';
+        }
+        
+        if (id === 'contact') {
+            containerElementContact.id = 'active';
+        } else {
+            containerElementContact.id = '';
         }
 
         // Remove 'active' class from other elements and restore their original innerHTML

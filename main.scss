@@ -23,6 +23,24 @@ $font-bold: "NeueMontreal-Bold", sans-serif;
 $font-regular: "NeueMontreal-Regular", sans-serif;
 $font-medium: "NeueMontreal-Medium", sans-serif;
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 html,
 body {
   width: 100vw;
@@ -168,12 +186,20 @@ body {
 {
     display: flex;
     opacity: 1;
-    transition: opacity 0.5s ease;
+    animation: fadeIn .7s ease-in-out forwards;
+    
+}
+
+#inactive
+{
+    animation: fadeOut .7s ease-in-out forwards;
+    ;
 }
 .container__right__home {
     display: none;
     flex-direction: column-reverse;
     opacity: 0;
+    
     
     p {
         line-height: 1.5;
@@ -195,7 +221,7 @@ body {
     opacity: 0;
     flex-direction: column;
     z-index: 2;
-    margin-top: 400px;
+    margin-top: 350px;
     
     h3 {
         letter-spacing: 1px;

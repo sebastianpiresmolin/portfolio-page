@@ -14,6 +14,22 @@
   font-family: "NeueMontreal-Regular"; /* A name to be used later */
   src: url(media/fonts/NeueMontreal-Regular.otf);
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 html,
 body {
   width: 100vw;
@@ -162,7 +178,11 @@ body {
 #active {
   display: flex;
   opacity: 1;
-  transition: opacity 0.5s ease;
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+#inactive {
+  animation: fadeOut 0.7s ease-in-out forwards;
 }
 
 .container__right__home {
@@ -190,7 +210,7 @@ body {
   opacity: 0;
   flex-direction: column;
   z-index: 2;
-  margin-top: 400px;
+  margin-top: 350px;
 }
 .container__right__projects h3 {
   letter-spacing: 1px;
