@@ -80,6 +80,14 @@ let homeElement = document.getElementById('home');
 originalHTML['home'] = homeElement.innerHTML;
 homeElement.innerHTML = '<i class="fa-solid fa-circle fa-2xs"></i>';
 
+
+let containerLeftH1 = document.querySelector('.container__left h1');
+let containerLeftH2 = document.querySelector('.container__left h2');
+let containerLeftLinks = document.querySelectorAll('.container__left__links');
+let containerThemes = document.querySelector('.container__themes');
+let containerThemesA = document.querySelector('.container__themes a');
+let themeActive = document.querySelector('.themeActive');
+
 document.getElementById('dark').addEventListener('click', () => {
     let lightElement = document.getElementById('light');
     let darkElement = document.getElementById('dark');
@@ -104,4 +112,15 @@ document.getElementById('light').addEventListener('click', () => {
         darkElement.classList.remove('themeActive');
         lightElement.classList.add('themeActive');
     }
+});
+
+document.getElementById('mono').addEventListener('click', () => {
+    let monoElement = document.getElementById('mono');
+    
+    if (monoElement.classList.contains('themeActive')) {
+        monoElement.classList.remove('themeActive');
+    } else {
+        monoElement.classList.add('themeActive');
+    }
+
 });

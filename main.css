@@ -14,6 +14,18 @@
   font-family: "NeueMontreal-Regular"; /* A name to be used later */
   src: url(media/fonts/NeueMontreal-Regular.otf);
 }
+@font-face {
+  font-family: "NeueMontrealMono-Light"; /* A name to be used later */
+  src: url(media/fonts/PPNeueMontrealMono-Thin.otf);
+}
+@font-face {
+  font-family: "NeueMontrealMono-Regular"; /* A name to be used later */
+  src: url(media/fonts/PPNeueMontrealMono-Book.otf);
+}
+@font-face {
+  font-family: "NeueMontrealMono-bold"; /* A name to be used later */
+  src: url(media/fonts/PPNeueMontrealMono-Bold.otf);
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -151,6 +163,10 @@ body {
 }
 
 #dark.themeActive::before {
+  background-color: white;
+}
+
+#mono.themeActive::before {
   background-color: white;
 }
 
