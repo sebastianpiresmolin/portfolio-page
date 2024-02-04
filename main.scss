@@ -64,6 +64,15 @@ $darkmode-hover: rgba(255, 255, 255, 0.26);
     opacity: 0;
   }
 }
+.whitemode {
+  background-color: white;
+  color: black;
+}
+
+.darkmode {
+  background-color: black;
+  color: white;
+}
 
 html,
 body {
@@ -242,8 +251,10 @@ body {
 
 .container__right {
   display: flex;
+  flex-direction: row-reverse;
   width: 50vw;
   height: 100vh;
+  margin-right: 40px;
 }
 #active {
   display: flex;
@@ -264,7 +275,6 @@ body {
     letter-spacing: 1px;
     margin-top: 0;
     margin-bottom: 40px;
-    margin-right: 40px;
     margin-left: 20px;
     height: fit-content;
     font-weight: 600;
@@ -279,7 +289,7 @@ body {
   opacity: 0;
   flex-direction: column;
   z-index: 2;
-  margin-top: 350px;
+  margin-top: 50vh;
 
   h3 {
     letter-spacing: 1px;
