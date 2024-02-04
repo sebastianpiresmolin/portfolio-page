@@ -74,8 +74,7 @@ function handleClick(id) {
   }
 
   // Remove 'active' class from 'container__right__home' if 'home' is not active
-  if (id !== 'home' && containerElement.id === 'active') {
-    containerElement.id = '';
+  if (ids !== 'home' && containerElementHome.id === 'active') {
   }
 }
 
@@ -103,9 +102,58 @@ document.getElementById('dark').addEventListener('click', () => {
   if (darkElement.classList.contains('themeActive')) {
     darkElement.classList.remove('themeActive');
     lightElement.classList.add('themeActive');
+    document.getElementsByClassName('container')[0].classList.add('lightmode');
+    document
+      .getElementsByClassName('container__left')[0]
+      .classList.add('lightmode');
+    document
+      .getElementsByClassName('container__left__links')[0]
+      .classList.add('lightmode');
+    document
+      .getElementsByClassName('container__right')[0]
+      .classList.add('lightmode');
+    document
+      .getElementsByClassName('container__right__projects')[0]
+      .classList.add('lightmode');
+    document
+      .getElementsByClassName('container__left__info')[0]
+      .classList.add('lightmode');
+    document
+      .querySelector('.container__right__projects h3')
+      .classList.add('lightmode');
+    document
+      .getElementsByClassName('container__right__contact')[0]
+      .classList.add('lightmode');
   } else {
     lightElement.classList.remove('themeActive');
     darkElement.classList.add('themeActive');
+    document
+      .getElementsByClassName('container')[0]
+      .classList.remove('lightmode');
+    document
+      .getElementsByClassName('container__left')[0]
+      .classList.remove('lightmode');
+    document
+      .getElementsByClassName('container__left__links')[0]
+      .classList.remove('lightmode');
+    document
+      .getElementsByClassName('container__right')[0]
+      .classList.remove('lightmode');
+    document
+      .getElementsByClassName('container__right__projects')[0]
+      .classList.remove('lightmode');
+    document
+      .querySelector('.container__right__projects h3')
+      .classList.remove('lightmode');
+    document
+      .querySelector('.container__right__projects h3')
+      .classList.remove('lightmode');
+    document
+      .getElementsByClassName('container__left__info')[0]
+      .classList.remove('lightmode');
+    document
+      .getElementsByClassName('container__right__contact')[0]
+      .classList.remove('lightmode');
   }
 });
 
@@ -116,9 +164,58 @@ document.getElementById('light').addEventListener('click', () => {
   if (lightElement.classList.contains('themeActive')) {
     lightElement.classList.remove('themeActive');
     darkElement.classList.add('themeActive');
+    document
+      .getElementsByClassName('container')[0]
+      .classList.remove('lightmode');
+    document
+      .getElementsByClassName('container__left')[0]
+      .classList.remove('lightmode');
+    document
+      .getElementsByClassName('container__left__links')[0]
+      .classList.remove('lightmode');
+    document
+      .getElementsByClassName('container__right')[0]
+      .classList.remove('lightmode');
+    document
+      .getElementsByClassName('container__right__projects')[0]
+      .classList.remove('lightmode');
+    document
+      .querySelector('.container__right__projects h3')
+      .classList.remove('lightmode');
+    document
+      .querySelector('.container__right__projects h3')
+      .classList.remove('lightmode');
+    document
+      .getElementsByClassName('container__left__info')[0]
+      .classList.remove('lightmode');
+    document
+      .getElementsByClassName('container__right__contact')[0]
+      .classList.remove('lightmode');
   } else {
     darkElement.classList.remove('themeActive');
     lightElement.classList.add('themeActive');
+    document.getElementsByClassName('container')[0].classList.add('lightmode');
+    document
+      .getElementsByClassName('container__left')[0]
+      .classList.add('lightmode');
+    document
+      .getElementsByClassName('container__left__links')[0]
+      .classList.add('lightmode');
+    document
+      .getElementsByClassName('container__right')[0]
+      .classList.add('lightmode');
+    document
+      .getElementsByClassName('container__right__projects')[0]
+      .classList.add('lightmode');
+    document
+      .getElementsByClassName('container__left__info')[0]
+      .classList.add('lightmode');
+    document
+      .querySelector('.container__right__projects h3')
+      .classList.add('lightmode');
+    document
+      .getElementsByClassName('container__right__contact')[0]
+      .classList.add('lightmode');
   }
 });
 
