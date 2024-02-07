@@ -194,6 +194,7 @@ body {
     color: inherit;
     margin-bottom: 20px;
     cursor: pointer;
+    white-space: nowrap;
   }
   ul {
     display: flex;
@@ -203,11 +204,13 @@ body {
     z-index: 0;
     list-style-type: none;
     margin: 0;
+    white-space: nowrap;
   }
   li {
     position: relative;
     margin-bottom: 10px;
     height: fit-content;
+    white-space: nowrap;
   }
 }
 
