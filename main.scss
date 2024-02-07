@@ -116,7 +116,7 @@ body {
   h1 {
     white-space: nowrap;
     margin-left: 40px;
-    margin-top: 5vh;
+    margin-top: 90px;
     margin-bottom: 0;
     height: fit-content;
     font-weight: lighter;
@@ -238,8 +238,6 @@ body {
 #mono.monoWhite.themeActive::before {
   background-color: $black;
 }
-
-
 
 #light::before {
   content: '';
@@ -453,8 +451,8 @@ body {
   letter-spacing: 1px;
   display: none;
   flex-direction: column;
-  margin-top: 93vh;
-  margin-bottom: 5vh;
+  margin-top: 90vh;
+  margin-bottom: 10vh;
   margin-left: 75px;
   height: fit-content;
   font-weight: bold;
@@ -468,8 +466,6 @@ body {
     margin-bottom: 20px;
   }
 }
-
-
 
 $color-bg: #1e1e1e;
 $spacing: 2560px;
@@ -486,7 +482,8 @@ $time-4: 200s;
 @function particles($max) {
   $val: 0px 0px var(--color-particle);
   @for $i from 1 through $max {
-    $val: #{$val}, random($spacing) + px random($spacing) + px var(--color-particle);
+    $val: #{$val},
+      random($spacing) + px random($spacing) + px var(--color-particle);
   }
   @return $val;
 }
