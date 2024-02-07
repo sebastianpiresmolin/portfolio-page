@@ -98,10 +98,16 @@ let themeActive = document.querySelector('.themeActive');
 document.getElementById('dark').addEventListener('click', () => {
   let lightElement = document.getElementById('light');
   let darkElement = document.getElementById('dark');
+  let monoElement = document.getElementById('mono');
 
   if (darkElement.classList.contains('themeActive')) {
     darkElement.classList.remove('themeActive');
+    darkElement.classList.add('themeInactive');
     lightElement.classList.add('themeActive');
+    lightElement.classList.remove('themeInactive');
+    monoElement.classList.add('monoWhite');
+    document.documentElement.style.setProperty('--color-particle', 'black');
+
     document.getElementsByClassName('container')[0].classList.add('lightmode');
     document
       .getElementsByClassName('container__left')[0]
@@ -124,9 +130,18 @@ document.getElementById('dark').addEventListener('click', () => {
     document
       .getElementsByClassName('container__right__contact')[0]
       .classList.add('lightmode');
+    document
+      .getElementsByClassName('container__themes')[0]
+      .classList.add('lightmode');
   } else {
     lightElement.classList.remove('themeActive');
+    lightElement.classList.remove('themeActive');
+    lightElement.classList.add('themeInactive');
     darkElement.classList.add('themeActive');
+    darkElement.classList.remove('themeInactive');
+    monoElement.classList.remove('monoWhite');
+    document.documentElement.style.setProperty('--color-particle', 'white');
+
     document
       .getElementsByClassName('container')[0]
       .classList.remove('lightmode');
@@ -153,6 +168,9 @@ document.getElementById('dark').addEventListener('click', () => {
       .classList.remove('lightmode');
     document
       .getElementsByClassName('container__right__contact')[0]
+      .classList.remove('lightmode');
+    document
+      .getElementsByClassName('container__themes')[0]
       .classList.remove('lightmode');
   }
 });
@@ -160,10 +178,16 @@ document.getElementById('dark').addEventListener('click', () => {
 document.getElementById('light').addEventListener('click', () => {
   let lightElement = document.getElementById('light');
   let darkElement = document.getElementById('dark');
+  let monoElement = document.getElementById('mono');
 
   if (lightElement.classList.contains('themeActive')) {
     lightElement.classList.remove('themeActive');
+    lightElement.classList.add('themeInactive');
     darkElement.classList.add('themeActive');
+    darkElement.classList.remove('themeInactive');
+    monoElement.classList.remove('monoWhite');
+    document.documentElement.style.setProperty('--color-particle', 'white');
+
     document
       .getElementsByClassName('container')[0]
       .classList.remove('lightmode');
@@ -191,9 +215,17 @@ document.getElementById('light').addEventListener('click', () => {
     document
       .getElementsByClassName('container__right__contact')[0]
       .classList.remove('lightmode');
+    document
+      .getElementsByClassName('container__themes')[0]
+      .classList.remove('lightmode');
   } else {
     darkElement.classList.remove('themeActive');
+    darkElement.classList.remove('themeActive');
+    darkElement.classList.add('themeInactive');
     lightElement.classList.add('themeActive');
+    lightElement.classList.remove('themeInactive');
+    monoElement.classList.add('monoWhite');
+    document.documentElement.style.setProperty('--color-particle', 'black');
     document.getElementsByClassName('container')[0].classList.add('lightmode');
     document
       .getElementsByClassName('container__left')[0]
@@ -215,6 +247,9 @@ document.getElementById('light').addEventListener('click', () => {
       .classList.add('lightmode');
     document
       .getElementsByClassName('container__right__contact')[0]
+      .classList.add('lightmode');
+    document
+      .getElementsByClassName('container__themes')[0]
       .classList.add('lightmode');
   }
 });
@@ -223,8 +258,33 @@ document.getElementById('mono').addEventListener('click', () => {
   let monoElement = document.getElementById('mono');
 
   if (monoElement.classList.contains('themeActive')) {
+    document.documentElement.style.setProperty(
+      '--font-light',
+      'NeueMontreal-Light'
+    );
+    document.documentElement.style.setProperty(
+      '--font-bold',
+      'NeueMontreal-Bold'
+    );
+    document.documentElement.style.setProperty(
+      '--font-regular',
+      'NeueMontreal-Regular'
+    );
     monoElement.classList.remove('themeActive');
   } else {
+    document.documentElement.style.setProperty(
+      '--font-light',
+      'NeueMontrealMono-Light'
+    );
+    document.documentElement.style.setProperty(
+      '--font-bold',
+      'NeueMontrealMono-bold'
+    );
+    document.documentElement.style.setProperty(
+      '--font-regular',
+      'NeueMontrealMono-Regular'
+    );
+
     monoElement.classList.add('themeActive');
   }
 });
