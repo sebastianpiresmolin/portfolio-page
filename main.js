@@ -231,6 +231,9 @@ document.getElementById('light').addEventListener('click', () => {
       .getElementsByClassName('container__left')[0]
       .classList.add('lightmode');
     document
+      .getElementsByClassName('container__left__links')[0]
+      .classList.add('lightmode');
+    document
       .getElementsByClassName('container__right')[0]
       .classList.add('lightmode');
     document
